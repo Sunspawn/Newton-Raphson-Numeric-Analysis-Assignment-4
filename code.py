@@ -12,7 +12,7 @@ epsilon = 1e-10
 max_iterations = 100
 
 
-def read_double_variable_func():
+def read_func():
     """Reads a mathematical function with an x variable from the user.
     :return:                The function
     """
@@ -100,7 +100,7 @@ def secant_method(f, start, end, error=epsilon, max_iter=max_iterations):
 
 
 if __name__ == "__main__":
-    f = read_double_variable_func()
+    f = read_func()
 
     result = newton_raphson(f, 1, 5)
     print('The result was: x = %0.6f and f(x) = %0.6f\n' % (result[0], f(result[0])))
